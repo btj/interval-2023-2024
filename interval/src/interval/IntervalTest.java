@@ -8,11 +8,12 @@ class IntervalTest {
 	
 	@Test
 	void test() {
-		Interval interval = new Interval();
-		interval.setOndergrens(3);
-		interval.setBovengrens(7);
+		Interval interval = new Interval(3, 7);
+		interval.setOndergrens(2);
+		interval.setBovengrens(8);
+		
 		int lengte = interval.getLengte();
-		assertEquals(4, lengte);
+		assertEquals(6, lengte);
 	}
 
 }
