@@ -3,18 +3,22 @@ package interval;
 public class Interval {
 
 	private int ondergrens;
-	private int bovengrens;
+	private int lengte;
 	
-	public static int getLengte(Interval interval) {
-		return interval.bovengrens - interval.ondergrens;
+	public int getOndergrens() {
+		return this.ondergrens;
 	}
 	
-	public static void setOndergrens(Interval interval, int nieuweOndergrens) {
-		interval.ondergrens = nieuweOndergrens;
+	public int getLengte() {
+		return this.lengte;
 	}
 	
-	public static void setBovengrens(Interval interval, int nieuweBovengrens) {
-		interval.bovengrens = nieuweBovengrens;
+	public void setOndergrens(int nieuweOndergrens) {
+		this.ondergrens = nieuweOndergrens;
+	}
+	
+	public void setBovengrens(int nieuweBovengrens) {
+		this.lengte = nieuweBovengrens - this.ondergrens;
 	}
 	
 }
